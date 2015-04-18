@@ -2,6 +2,6 @@
 Home.controller("lutenantController", function($scope, lutenantModel){
  
     //obtenemos todas las notas
-    $scope.menus = lutenantModel.getMenus();
+    $scope.menu = lutenantModel.getMenu();
  
 })
