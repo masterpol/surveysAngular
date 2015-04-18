@@ -36,3 +36,12 @@ body {
 .text-general-blue {
     color: #34495e;
 }
+/*------- header ------*/
+#header {
+    min-height: 50px;
+    padding: 10px 0 0 0;
+}
+.general-logo img{
+    width: 30px;
+    height: 30px;
+}

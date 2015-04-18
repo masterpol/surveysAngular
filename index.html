@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="lutenant">
+<html ng-app="Home">
 <head>
     <title>lutenant</title>
     <meta charset="UTF-8">
@@ -9,10 +9,10 @@
     <link rel="stylesheet" type="text/css" href="css/lutenant.css">
 </head>
 <body>
-    <div id="header" class="bg-info-blue">
+    <div id="header" class="bg-info-blue" ng-controller="lutenantController">
         <div class="container">
             <div class="row">
-                <div class="col-md-1 pull-left">
+                <div class="col-md-1 pull-left general-logo">
                     <img src="http://www.lutenant.com/img/brand/ltnspid_small.png">
                 </div>
             </div>
@@ -34,8 +34,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.js"></script>
 <!-- My Script -->
-<script src="js/lutenant.js"></script>
-<script type="text/javascript" src="controllers/lutenantController.js"></script>
-<script type="text/javascript" src="models/lutenantModel.js"></script>
+<script src="/js/home.js"></script>
+<script type="text/javascript" src="/controllers/lutenantController.js"></script>
+<script type="text/javascript" src="/models/lutenantModel.js"></script>
 </body>
 </html>

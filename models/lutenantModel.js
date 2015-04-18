@@ -1,4 +1,4 @@
-Menu.service("lutenantModel", function(){
+Home.service("lutenantModel", function(){
 
     this.getMenu = function(){
         return [
