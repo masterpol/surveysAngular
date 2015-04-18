@@ -20,6 +20,7 @@ body {
 }
 .btn.bg-info-blue:hover {
     opacity: .9;
+    text-decoration: none;
 }
 .text-info-blue {
     color: #3598db;
@@ -32,16 +33,56 @@ body {
 }
 .btn.bg-general-blue:hover {
     opacity: .9;
+    text-decoration: none;
 }
 .text-general-blue {
     color: #34495e;
 }
+.bg-white {
+    background: #fff;
+}
+.btn.bg-white {
+    color: #fff;
+}
+.btn.bg-white:hover {
+    opacity: .9;
+    text-decoration: none;
+}
 /*------- header ------*/
 #header {
     min-height: 50px;
-    padding: 10px 0 0 0;
+    padding: 10px 0;
+}
+.general-logo {
+    height: 50px;
+    padding: 10px 15px;
+    display:inline-block;
 }
 .general-logo img{
     width: 30px;
     height: 30px;
+}
+.main-menu {
+    display: inline-block;
+}
+.main-menu > li {
+    float: left;
+    margin-right: 10px;
+}
+.main-menu > li a {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px 15px;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    text-shadow: 0 0 2px #3598db;
+}
+.main-menu > li a:hover {
+    border-color: #e82930;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }

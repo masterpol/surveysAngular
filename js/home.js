@@ -1,11 +1,11 @@
-var configHome = function($routeProvider){
+var configHome = function($routeProvider) {
  
-    $routeProvider.when("/home", {
-        controller: "lutenantController",
+    $routeProvider.when("/", {
+        controller: "homeController",
         templateUrl: "views/home.html"
     });
  
 }
  
 //create module and config
-var Home = angular.module("home", ["ngRoute"]).config(configHome);
+var Home = angular.module("Home", ["ngRoute"]).config(configHome);
