@@ -5,12 +5,12 @@ Home.service("homeModel", function(){
             {
                 id : 0,
                 value : "home",
-                link : "/home"
+                link : "#/home"
             },
             {
                 id : 1,
-                value : "about",
-                link : "/about"
+                value : "form",
+                link : "#/form"
             }
         ]
     }

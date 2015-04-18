@@ -16,38 +16,38 @@ function submitSurveyForm() {
             youCan = $youCan.val(),
             $youWish = $("#you_wish") 
             youWish = $youWish.val(),
-            mensaje = [],
+            menssages = [],
             $modal = $("#myModal");
 
         if (name.length == 0) {
             $name.css("border","1px solid red");
-            mensaje.push("The field is required name");
+            menssages.push("The field is required name");
         }
 
         if (email.length == 0) {
             $email.css("border","1px solid red");
-            mensaje.push("The field is required email");
+            menssages.push("The field is required email");
         }
 
         if (youLike.length == 0) {
             $youLike.css("border","1px solid red");
-            mensaje.push("The field is required ask 1");
+            menssages.push("The field is required ask 1");
         }
 
         if (youCan.length == 0) {
             $youCan.css("border","1px solid red");
-            mensaje.push("The field is required ask 2");
+            menssages.push("The field is required ask 2");
         }
 
         if (youWish.length == 0) {
             $youWish.css("border","1px solid red");
-            mensaje.push("The field is required ask 3");
+            menssages.push("The field is required ask 3");
         }
 
-        if (mensaje.length > 0) {
+        if (menssages.length > 0) {
             var pop = '<ul  class="list-unstyled alert alert-danger">';
-            for (var i = mensaje.length - 1; i >= 0; i--) {
-                pop += "<li>" + mensaje[i] + "</li>"
+            for (var i = menssages.length - 1; i >= 0; i--) {
+                pop += "<li>" + menssages[i] + "</li>"
             };
             pop += "</ul>";
 
@@ -55,7 +55,26 @@ function submitSurveyForm() {
             $form.prepend(pop);
             return;
         } else {
+            var data = ["<span class='text-red'>Full name:</span> </br>"+name,
+                        "<span class='text-red'>Email:</span> </br>"+email, 
+                        "<span class='text-red'>You like star wars?:</span> </br>"+youLike, 
+                        "<span class='text-red'>What are your skills?:</span> </br>"+youCan,
+                        "<span class='text-red'>if you had a power which will?:</span> </br>"+youWish],
+                $modalUl = $(".show-answer"),
+                $modalLi = $modalUl.find("li");
+
+            for (var i = 0; i <= data.length - 1; i++) {
+                $modalLi.clone().html(data[i]).appendTo($modalUl);
+            };
             $modal.modal("show");
+            _modalClose($modal);
         }
     });   
 } 
+
+function _modalClose($modal) {
+    var $elements = $modal.find(".show-answer span").parent("li");
+    $modal.on("hide.bs.modal", function(){
+        $elements.remove();
+    });
+}

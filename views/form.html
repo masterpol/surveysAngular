@@ -1,3 +1,15 @@
+<div class="bg-general-blue">
+    <div class="container">
+        <div class="row">
+            <div class="arrowBack col-md-2">
+                <a href="/#/" class="text-white"><-</a>
+            </div>
+            <div class="col-md-4 pull-right">
+                <h4 class="text-white">Come on Survey!!<span class="kittie-face glyphicon glyphicon-plus"></span></h4>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container" ng-controller="questionsController">
     <div class="row">
         <div class="col-md-12">
@@ -5,7 +17,7 @@
             <form id="survey-form" class="col-md-6 col-md-offset-3">
                 <div ng-repeat="item in questions" class="form-group">
                     <label for="{{item.value}}">{{item.value}}</label>
-                    <input ng-model=""  type="{{item.type}}" class="form-control {{item.required}}" id="{{item.name}}" placeholder="Enter name">
+                    <input type="{{item.type}}" class="form-control {{item.required}}" id="{{item.name}}" placeholder="Enter name">
                 </div>
                 <div class="col-md-12 text-center">
                     <button id="submit" class="btn bg-info-blue btn-lg">Submit</button>
@@ -19,11 +31,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <button type="button" class="close text-red" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center text-general-blue" id="myModalLabel">You wanna save your answers?</h4>
       </div>
       <div class="modal-body">
-        ...
+        <ul class="show-answer list-unstyled">
+            <li></li>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

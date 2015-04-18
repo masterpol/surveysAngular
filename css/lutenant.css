@@ -52,6 +52,19 @@ body {
 .text-white {
     color: #fff;
 }
+.bg-red {
+    background: #e82930;
+}
+.btn.bg-red{
+    color: #fff;
+}
+.btn.bg-red:hover {
+    opacity: .9;
+    text-decoration: none;
+}
+.text-red {
+    color: #e82930;
+}
 /*------- header ------*/
 #header {
     min-height: 50px;
@@ -108,4 +121,62 @@ body {
     border-radius: 0;
     margin-left: -5px;
     margin-top: -3px;
+}
+/*----- form -----*/
+.arrowBack a {
+    font-size: 35px;
+}
+.arrowBack a:hover {
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: #e82930;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.kittie-face {
+    margin-left: 20px;
+    background: #8f1e24;
+    width: 10px;
+    height: 10px;
+    border-radius: 40px;
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         0.8s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-ANIMATION-timing-function:  linear;
+    animation-name:             rotate; 
+    animation-duration:         0.8s; 
+    animation-iteration-count:  infinite;
+    animation-timing-function:  linear;
+}
+.show-answer {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+}
+.show-answer li:first-child {
+    display: none;
+}
+.show-answer li:first-child,
+.show-answer li:last-child {
+    border: 0 none
+}
+.show-answer li {
+    border-bottom: 2px dashed #3598db;
+    padding: 15px
+}
+.show-answer li span {
+    font-size: 18px;
 }
