@@ -1,0 +1,38 @@
+/*-------- General styles --------*/
+body {
+    color: #34495e;
+}
+.g-margin-top {
+    margin-top: 20px;
+}
+.g-margin-bottom {
+    margin-bottom: 20px;
+}
+.g-margin {
+    margin: 20px 0;
+}
+/*-------- General colors --------*/
+.bg-info-blue {
+    background: #3598db;
+}
+.btn.bg-info-blue {
+    color: #fff;
+}
+.btn.bg-info-blue:hover {
+    opacity: .9;
+}
+.text-info-blue {
+    color: #3598db;
+}
+.bg-general-blue {
+    background: #34495e;
+}
+.btn.bg-general-blue {
+    color: #fff;
+}
+.btn.bg-general-blue:hover {
+    opacity: .9;
+}
+.text-general-blue {
+    color: #34495e;
+}
