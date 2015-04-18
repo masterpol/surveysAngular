@@ -67,6 +67,7 @@ function submitSurveyForm() {
                 $modalLi.clone().html(data[i]).appendTo($modalUl);
             };
             $modal.modal("show");
+            _drawSuccesMessage($modal);
             _modalClose($modal);
         }
     });   
@@ -77,4 +78,12 @@ function _modalClose($modal) {
     $modal.on("hide.bs.modal", function(){
         $elements.remove();
     });
+}
+
+function _drawSuccesMessage($modal) {
+    var $menssage = "<div class='alert alert-success'>Good job, Thanks for do this survey</div>",
+        $btn = $modal.find("#save-changes");
+    $btn.on("click", function() {
+         $modal.find(".modal-body").html($menssage);
+    });    
 }
